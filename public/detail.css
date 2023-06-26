@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body{
+    width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+h1{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+input{
+    border: 0;
+    border-bottom: 1px solid gray;
+}
+
+input:focus{outline: none;}
+
+fieldset{
+    text-align: left;
+}
+
+form{
+    
+  width: 600px;
+  text-align: center;
+}
+
+table{
+    margin: 30px 0 40px 50px;
+    
+}
+
+table tr>td:nth-child(1){
+    text-align: left;
+    /* */
+    margin-top: 20px;   
+    font-weight: bold;
+}
+
+table tr>td:nth-child(2)>input{
+ width: 300px;
+ margin-left: 15px;
+ margin-top: 15px;
+ border: 1px solid red;
+}
+
+.submit,.delete{
+    width: 100px;
+    height: 30px;
+    border: 1px solid rebeccapurple;
+    color: #0050f0;
+    border: 1px solid #0050f0;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.delete:hover,.submit:hover{
+    background-color: #0050f0;
+    color: #fff;
+}
