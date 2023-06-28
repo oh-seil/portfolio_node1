@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>정보수정</title>
+    <style>
+        body{
+            width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        h1{
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        input{
+            border: 0;
+            border-bottom: 1px solid gray;
+        }
+
+        input:focus{outline: none;}
+
+        form{
+        width: 600px;
+        text-align: center;
+        }
+
+        .info{
+            margin: 30px 0 40px 50px;
+        }
+
+
+        .info tr>td:nth-child(1){
+            text-align: left;
+            /* */
+            margin-top: 20px;   
+            font-weight: bold;
+        }
+
+
+        .info tr>td:nth-child(2)>input{
+        width: 300px;
+        margin-left: 15px;
+        margin-top: 15px;
+        }
+
+        .department{
+            width: 300px;
+            margin-left: 15px;
+
+        }
+
+        .change {
+            float: left;
+            margin-left: 150px;
+        }
+
+        .change ,.cancel{
+            width: 100px;
+            height: 30px;
+            border: 1px solid rebeccapurple;
+            color: #0050f0;
+            border: 1px solid #0050f0;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-right: 50px;
+
+        }    
+
+        .change:hover, .cancel:hover{
+            background-color: #0050f0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>정보 수정</h1>
+    <form method="post">
+        <fieldset>
+            <table class="info">
+                <tr>
+                    <td>부서</td>
+                    <td>
+                        <select name="department" class="department">
+                            <option selected value="">부서 선택</option>
+                            <option value="수출입통관부">수출입통관부</option>
+                            <option value="항공사업부(업무)">항공사업부(업무)</option>
+                            <option value="항공사업부(영업)">항공사업부(영업)</option>
+                            <option value="해상사업부(업무)">해상사업부(업무)</option>
+                            <option value="해상사업부(영업)">해상사업부(영업)</option>
+                            <option value="관리부(총무)">관리부(총무)</option>
+                            <option value="관리부(운영)">관리부(운영)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="name" value="<%= data.name %>"></td>
+                </tr>
+                <tr>
+                    <td>직급</td>
+                    <td><input type="text" name="position" value="<%= data.position %>"></td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td><input type="text" name="birthday" value="<%= data.birthday %>"></td>
+                </tr>
+                <tr>
+                    <td>입사일자</td>
+                    <td><input type="text" name="date" value="<%= data.date %>"></td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td><input type="text" name="phoneNumber" value="<%=data.phoneNumber%>"></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="text" name="email" value="<%=data.email%>"></td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td><input type="text" name="address" value="<%=data.address%>"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="submit" value="수정" class="change">
+    </form>
+    <a href="/"><button class="cancel">홈으로</button></a>
+</body>
+</html>

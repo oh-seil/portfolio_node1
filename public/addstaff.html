@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./addstaff.css">
+</head>
+<body>
+    <h1>직원 등록</h1>
+    <form method="post">
+        <fieldset>
+            <table class="info">
+                <tr>
+                    <td>부서</td>
+                    <td>
+                        <select name="department" class="department">
+                            <option selected value="">--부서 선택--</option>
+                            <option value="수출입통관부">수출입통관부</option>
+                            <option value="항공사업부(업무)">항공사업부(업무)</option>
+                            <option value="항공사업부(영업)">항공사업부(영업)</option>
+                            <option value="해상사업부(업무)">해상사업부(업무)</option>
+                            <option value="해상사업부(영업)">해상사업부(영업)</option>
+                            <option value="관리부(총무)">관리부(총무)</option>
+                            <option value="관리부(운영)">관리부(운영)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>직급</td>
+                    <td><input type="text" name="position"></td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td><input type="text" name="birthday"></td>
+                </tr>
+                <tr>
+                    <td>입사일자</td>
+                    <td><input type="text" name="date"></td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td><input type="text" name="phoneNumber"></td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td><input type="text" name="address"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="submit" value="등록">
+    </form>
+        <a href="/"><button class="cancel">취소</button></a>
+</body>
+</html>

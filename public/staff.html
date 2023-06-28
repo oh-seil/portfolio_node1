@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>직원현황</title>
+    <link rel="stylesheet" href="./staff.css">
+</head>
+<body>
+    <h1>직원 현황</h1>
+    <form action="/create" method="get">
+        <input type="submit" value="등록" class="submit">
+    </form>
+    
+    <table>
+        <tr>
+            <th>사번</th>
+            <th>부서</th>
+            <th>이름</th>
+            <th>직급</th>
+            <th>생년월일</th>
+            <th>입사일자</th>
+        </tr>
+        <% data.forEach(function (staff,index){ %>
+        <tr>
+            <td><%= staff.number %></td>
+            <td><%= staff.department %></td>
+            <td><a href="/detail/<%= staff.number %>"><%= staff.name %></a></td>
+            <td><%= staff.position %></td>
+            <td><%= staff.birthday %></td>
+            <td><%= staff.date %></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
