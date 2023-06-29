@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>직원 정보</title>
+    <style>
+        body{
+            width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        h1{
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        form{
+           
+        width: 600px;
+        text-align: center;
+        }
+
+        table{
+            margin: 30px 0 40px 50px;
+        }
+        
+        table tr>td:nth-child(1){
+            text-align: left; 
+            font-weight: bold;
+            padding-top: 15px;
+            /* border: 1px solid rebeccapurple; */
+        }
+
+        table tr>td:nth-child(2){
+        width: 300px;
+        padding-top: 15px;
+        border-bottom: 1px solid #ddd;
+        }
+
+        div{
+            width: 600px;
+            text-align: center;
+
+        }
+
+        .submit,.delete,.cancel{
+            width: 100px;
+            height: 30px;
+            color: #0050f0;
+            border: 1px solid #0050f0;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-right: 50px;
+
+        }
+
+        .delete:hover,.submit:hover,.cancel:hover{
+            background-color: #0050f0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>직원 정보</h1>
+    <form method="post">
+        <fieldset>
+            <table class="info">
+                <tr>
+                    <td>이름:</td>
+                    <td><%=data.name%></td>
+                </tr>
+                <tr>
+                    <td>전화번호:</td>
+                    <td><%=data.phoneNumber%></td>
+                </tr>
+                <tr>
+                    <td>이메일:</td>
+                    <td><%=data.email%></td>
+                </tr>
+                <tr>
+                    <td>주소:</td>
+                    <td><%=data.address%></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <div>
+        <a href="/modify/<%=data.number%>"><button class="submit">수정</button></a>
+        <a href="/delete/<%= data.number %>" ><button class="delete">삭제</button></a>
+        <a href="/"><button class="cancel">돌아가기</button></a>
+    </div>
+</body>
+</html>
